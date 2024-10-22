@@ -8,6 +8,30 @@ export const fetchTodos = async () => {
   });
 };
 
+export const fetchTodo = async (id) => {
+  return await customFetch({
+    options: {
+      url: `http://localhost:5273/api/Todo/${id}`,
+    },
+  });
+};
+
+export const fetchTodoStatus = async () => {
+  return await customFetch({
+    options: {
+      url: "http://localhost:5273/api/Todo/Status/key-values",
+    },
+  });
+};
+
+export const fetchTodoPriority = async () => {
+  return await customFetch({
+    options: {
+      url: "http://localhost:5273/api/Todo/Priority/key-values",
+    },
+  });
+};
+
 export const createTodo = async (payload) => {
   return await customFetch({
     options: {

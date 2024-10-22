@@ -33,3 +33,11 @@ export const fetchUsers = async () => {
     },
   });
 };
+
+export const fetchUserTodos = async (id) => {
+  return await customFetch({
+    options: {
+      url: `http://localhost:5273/api/user/${id}/todos`,
+    },
+  });
+};
